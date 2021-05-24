@@ -94,9 +94,20 @@ async function build (watch) {
     ]);
   }
 
-  await buildCss();
-  await buildJs();
-  await buildHtml();
+  async function buildManifest () {
+    let html = await fs.promises.readFile('./src/manifest.json', 'utf8');
+
+    html = html.replace(/\{BASE_URL\}/g, process.env.BASE_URL || '/');
+
+    await fs.promises.writeFile('./public/manifest.json', html);
+  }
+
+  await Promise.all([
+    buildCss(),
+    buildJs(),
+    buildHtml(),
+    buildManifest()
+  ]);
 }
 
 const watch = (process.argv[2] === '-w' || process.argv[2] === '--watch');

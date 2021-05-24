@@ -4,6 +4,7 @@ public/*.css
 public/*.svg
 public/*.png
 public/*.html
+public/*.json
 node_modules
 meta.json
 stats.html
