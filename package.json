@@ -27,6 +27,7 @@
     "glob": "^7.1.7",
     "hazkeyboard": "^1.0.0",
     "idb-keyval": "^5.0.5",
+    "inobounce": "^0.2.0",
     "location-change-event": "^1.0.2",
     "mithril": "^2.0.4",
     "routemeup": "^2.0.1",
