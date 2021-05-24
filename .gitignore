@@ -3,6 +3,7 @@ public/*.js
 public/*.css
 public/*.svg
 public/*.png
+public/*.html
 node_modules
 meta.json
 stats.html

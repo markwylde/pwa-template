@@ -83,8 +83,20 @@ async function build (watch) {
     });
   }
 
+  async function buildHtml () {
+    let html = await fs.promises.readFile('./src/index.html', 'utf8');
+
+    html = html.replace('{BASE_URL}', process.env.BASE_URL || '/');
+
+    await Promise.all([
+      fs.promises.writeFile('./public/index.html', html),
+      fs.promises.writeFile('./public/404.html', html)
+    ]);
+  }
+
   await buildCss();
   await buildJs();
+  await buildHtml();
 }
 
 const watch = (process.argv[2] === '-w' || process.argv[2] === '--watch');
