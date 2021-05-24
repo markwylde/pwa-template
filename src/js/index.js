@@ -17,9 +17,11 @@ function hijackNavigation () {
 }
 
 document.addEventListener('DOMContentLoaded', async function () {
-  // These are both to fix iPhone none compliance with web standards
-  require('./utilities/resizeToViewport.js')();
-  require('inobounce');
+  const isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
+  if (isIOS) {
+    require('./utilities/resizeToViewport.js')();
+    require('inobounce');
+  }
 
   const context = await createApp();
 
