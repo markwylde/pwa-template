@@ -1,0 +1,28 @@
+header {
+  background-color: var(--theme-primary);
+  color: white;
+  padding: 5px 5px 0 5px;
+  display: flex;
+  place-items: center;
+}
+
+header .logo {
+  background-image: url(../images/crazy.svg);
+
+  display: block;
+  height: 27px;
+  background-repeat: no-repeat;
+  background-size: 47px;
+  background-position: top left 3px;
+  padding: 5px 0 0 60px;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+header > *:first-child {
+  flex-grow: 1;
+}
+
+header > *:last-child {
+  color: white;
+}

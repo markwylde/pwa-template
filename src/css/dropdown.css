@@ -1,0 +1,66 @@
+b-dropdown:focus-within b-dropdown-content {
+  display: block;
+}
+
+b-dropdown:focus-within b-dropdown-button {
+  background-color: var(--theme-primary);
+  color: white;
+}
+
+b-dropdown {
+  position: relative;
+}
+b-dropdown:focus {
+  outline: none;
+}
+b-dropdown-button {
+  display: flex;
+  place-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: white;
+  color: var(--theme-primary-2);
+  font-weight: bold;
+  cursor: pointer;
+}
+
+b-dropdown-button > img {
+  height: 16px;
+}
+
+b-dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: var(--theme-primary);
+  right: 0;
+  z-index: 1000;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top-left-radius: 3px;
+  font-size: 17px;
+}
+
+b-dropdown-content > ul {
+  padding: 0;
+  margin: 0;
+}
+
+b-dropdown-content > ul > li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  white-space: nowrap;
+}
+
+b-dropdown-content > ul > li > a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+b-dropdown-content > ul > li > a {
+  cursor: pointer;
+}
+
+b-dropdown-content > ul > li > * {
+  display: block;
+  border-bottom: 1px solid var(--theme-primary-2);
+  padding: 13px;
+}

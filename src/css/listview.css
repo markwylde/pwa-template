@@ -1,0 +1,95 @@
+.listview > * > * {
+  padding: 0 10px;
+  align-self: center;
+}
+
+.listview > *:hover {
+  background-color: rgb(245, 245, 245);
+}
+
+.listview > * {
+  background-color: white;
+  margin-bottom: 3px;
+  display: flex;
+  cursor: pointer;
+}
+
+.listview button:disabled {
+  background-color: white;
+  color: var(--blue-2);
+}
+
+.listview .large-button {
+  padding: 10px;
+  border: 0;
+  font-size: 100%;
+  background-color: var(--blue-2);
+  color: white;
+  border-radius: 10px;
+}
+
+.listview-item-main {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  flex-grow: 1;
+}
+
+.listview-item-main > * {
+  display: block;
+}
+
+.listview-item-main > *:nth-child(2) {
+  color: gray;
+}
+
+.listview .commands a {
+  display: block;
+  padding: 10px;
+  text-align: center;
+  flex-grow: 1;
+  color: gray;
+  text-decoration: none;
+}
+
+.listview .commands {
+  margin: 2px;
+  padding: 0;
+  background-color: rgba(255, 255, 255, 0.7);
+  border: 1px dashed rgba(0, 0, 0, 0.2);
+}
+
+.listview .search-field input {
+  padding: 10px;
+  font-size: 100%;
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid var(--bumbana-blue);
+}
+
+.listview .search-field {
+  padding: 0;
+}
+
+.listview-item-controls {
+  padding: 0;
+}
+
+.listview-item-controls > * {
+  height: 100%;
+}
+
+.listview-item-controls > .button.button-danger {
+  background-color: darkred;
+  color: white;
+}
+.listview-item-controls > .button {
+  min-width: 30px;
+  min-height: 30px;
+  background-color: white;
+  font-size: 100%;
+  border: 0;
+}
+
+.listview-item-main[disabled] a {
+  color: gray;
+}

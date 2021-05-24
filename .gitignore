@@ -1,0 +1,8 @@
+public/*.map
+public/*.js
+public/*.css
+public/*.svg
+public/*.png
+node_modules
+meta.json
+stats.html

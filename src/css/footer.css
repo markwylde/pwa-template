@@ -1,0 +1,51 @@
+footer {
+  display: flex;
+  background-color: var(--theme-primary);
+  color: white;
+  padding: 0px;
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+footer > * {
+  margin: 0;
+  padding: 0;
+  display: inline-block;
+  font-size: 12px;
+}
+
+footer > a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+footer > a.active {
+  background-color: var(--theme-primary-2);
+}
+
+footer > a {
+  flex: auto;
+  cursor: pointer;
+  width: 90px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer > a > img {
+  filter: brightness(0) invert(1);
+  width: 30px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+
+footer > a > span {
+  text-align: center;
+}
+
+footer > a > *:first-child {
+  flex-grow: 1;
+}
+
+.lessThanViewportHeight footer {
+  padding-bottom: 0;
+}

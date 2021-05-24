@@ -1,0 +1,35 @@
+.first-load * {
+  animation-duration: 0ms !important;
+}
+
+.wrapper.page-transition > div > div {
+  animation: slide-in 0.15s;
+  animation-timing-function: ease-out;
+}
+.wrapper.page-transition > div.exit > div {
+  animation: slide-out 0.15s;
+  animation-timing-function: ease-in;
+}
+
+@keyframes slide-out {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+
+  100% {
+    transform: translateX(-30px);
+    opacity: 0.3;
+  }
+}
+
+@keyframes slide-in {
+  0% {
+    transform: translateX(30vw);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}

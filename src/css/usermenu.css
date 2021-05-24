@@ -1,0 +1,41 @@
+b-user-icon:focus-within b-user-menu {
+  display: block;
+}
+
+b-user-menu {
+  display: none;
+  position: absolute;
+  background-color: var(--blue-1);
+  right: 0;
+  z-index: 1000;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  border-top-left-radius: 3px;
+  font-size: 17px;
+}
+
+b-user-menu > ul {
+  padding: 0;
+  margin: 0;
+}
+
+b-user-menu > ul > li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  white-space: nowrap;
+  border-right: 1px solid white;
+}
+
+b-user-menu > ul > li > a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+b-user-menu > ul > li > a {
+  cursor: pointer;
+}
+
+b-user-menu > ul > li > * {
+  display: block;
+  border-bottom: 1px solid var(--blue-2);
+  padding: 10px;
+}

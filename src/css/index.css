@@ -1,0 +1,101 @@
+@import "./listview.css";
+@import "./header.css";
+@import "./footer.css";
+@import "./usermenu.css";
+@import "./dropdown.css";
+@import "./button.css";
+@import "./formInput.css";
+@import "./heading.css";
+@import "./transitions.css";
+
+* {
+  box-sizing: border-box;
+  font-family: arial;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  --theme-primary: #6d1e1e;
+  --theme-primary-2: #571111;
+  --theme-primary-3: #b34444;
+  --theme-secondary: #982c8a;
+
+  overscroll-behavior-y: none;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  min-height: 100%;
+  font-size: 18px;
+  background-color: rgb(240, 240, 240);
+}
+
+p {
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.not-found-page {
+  padding: 10px;
+  text-align: center;
+}
+.not-found-page > p {
+  margin-bottom: 20px;
+}
+.not-found-page > button {
+  background-color: var(--theme-primary);
+  font-size: 100%;
+  padding: 6px;
+}
+
+.loading {
+  display: flex;
+  flex-direction: column;
+  place-items: center;
+  place-content: center;
+  padding: 10px;
+  text-align: center;
+}
+
+.loading > p {
+  margin-bottom: 20px;
+}
+
+.loading > img {
+  width: 100px;
+}
+
+button:disabled {
+  opacity: 0.3;
+}
+
+main {
+  flex-grow: 1;
+  overflow: auto;
+}
+
+.wrapper {
+  overflow: hidden;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper > div {
+  flex-grow: 1;
+  overflow: hidden;
+  max-height: 100%;
+  display: flex;
+}
+
+.wrapper > div > div {
+  overflow: hidden;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  background-color: rgb(240, 240, 240);
+}
