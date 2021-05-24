@@ -28,7 +28,9 @@ document.addEventListener('DOMContentLoaded', async function () {
   }, 300);
 
   function render () {
-    const route = routemeup(routes, { url: window.location.pathname });
+    const baseUrl = new URL(document.querySelector('base').href).pathname;
+
+    const route = routemeup(routes, { url: window.location.pathname.replace(baseUrl, '/') });
     const controller = (route ? route.controller() : require('./pages/NotFoundPage'));
     const ui = mithril(controller, { context, tokens: route && route.tokens });
 
