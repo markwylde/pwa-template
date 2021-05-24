@@ -1,5 +1,5 @@
 const { version } = require('../../../package.json');
-const { setPath } = require('spath');
+const { setPath } = require('../app/setPath.js');
 const format = require('date-fns/format');
 
 const m = require('../mithril');

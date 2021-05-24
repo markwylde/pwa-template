@@ -1,4 +1,4 @@
-const { setPath } = require('spath');
+const setPath = require('../app/setPath.js');
 
 const m = require('../mithril');
 
