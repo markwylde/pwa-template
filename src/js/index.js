@@ -24,7 +24,6 @@ document.addEventListener('DOMContentLoaded', async function () {
   }
 
   const context = await createApp();
-
   hijackNavigation();
 
   setTimeout(() => {

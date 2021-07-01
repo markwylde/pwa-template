@@ -35,9 +35,9 @@ async function build (watch) {
       watch,
       minify: true,
       loader: {
-        '.svg': 'dataurl',
-        '.gif': 'dataurl',
-        '.png': 'dataurl',
+        '.svg': 'file',
+        '.gif': 'file',
+        '.png': 'file',
         '.js': 'jsx'
       },
       define: {
@@ -77,8 +77,8 @@ async function build (watch) {
       outfile: './public/style.min.css',
       watch,
       loader: {
-        '.svg': 'dataurl',
-        '.png': 'dataurl'
+        '.svg': 'file',
+        '.png': 'file'
       }
     });
   }

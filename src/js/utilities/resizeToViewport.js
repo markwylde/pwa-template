@@ -1,5 +1,5 @@
 function resizeToViewport () {
-  visualViewport && visualViewport.addEventListener('resize', function () {
+  visualViewport && screen && screen.orientation && visualViewport.addEventListener('resize', function () {
     if (visualViewport.height < (screen.availHeight - (screen.availHeight * 0.10))) {
       document.body.classList.add('lessThanViewportHeight');
     } else {

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "node tools/build",
-    "analyse": "esbuild-visualizer --metadata ./meta.json --exclude *.png",
+    "analyse": "./node_modules/.bin/esbuild-visualizer --metadata ./meta.json --exclude *.png",
     "watch": "node tools/build --watch",
     "serve": "servatron --spa -d public",
     "start": "npm run watch & npm run serve",
@@ -20,22 +20,29 @@
   },
   "license": "MIT",
   "dependencies": {
-    "date-fns": "^2.21.3",
-    "esbuild": "^0.12.1",
+    "chance": "^1.1.7",
+    "date-fns": "^2.22.1",
+    "esbuild": "^0.12.13",
+    "esbuild-visualizer": "^0.3.0",
     "events": "^3.3.0",
-    "faker": "^5.5.3",
     "glob": "^7.1.7",
     "hazkeyboard": "^1.0.0",
-    "idb-keyval": "^5.0.5",
+    "idb-keyval": "^5.0.6",
     "inobounce": "^0.2.0",
     "location-change-event": "^1.0.2",
     "mithril": "^2.0.4",
-    "routemeup": "^2.0.1",
-    "servatron": "^1.1.2",
+    "routemeup": "^2.0.2",
     "spath": "^2.0.3"
   },
   "devDependencies": {
-    "esbuild-visualizer": "^0.3.0",
-    "semistandard": "^16.0.0"
+    "automage": "^2.6.0",
+    "basictap": "^1.4.0",
+    "fake-indexeddb": "^3.1.3",
+    "jsdom": "^16.6.0",
+    "jsdom-browser.screen": "^0.2.2",
+    "jsdom-browser.screen-orientation": "^0.1.1",
+    "nanoid": "^3.1.23",
+    "semistandard": "^16.0.1",
+    "servatron": "^1.1.3"
   }
 }

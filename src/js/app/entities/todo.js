@@ -1,4 +1,5 @@
-const faker = require('faker');
+const Chance = require('chance');
+const chance = new Chance();
 
 function todos (context) {
   context.state.todos = [];
@@ -7,7 +8,7 @@ function todos (context) {
     const todos = await context.db.get('todos');
 
     context.state.todos = todos || [{
-      id: faker.datatype.uuid(),
+      id: chance.guid(),
       name: 'First hardcoded todo'
     }];
 
@@ -16,8 +17,8 @@ function todos (context) {
 
   function create (data = {}) {
     context.state.todos.push({
-      id: faker.datatype.uuid(),
-      name: data.name || faker.lorem.words()
+      id: chance.guid(),
+      name: data.name || chance.sentence({ words: 5 })
     });
 
     context.db.set('todos', context.state.todos);
