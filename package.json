@@ -41,7 +41,7 @@
     "jsdom": "^16.6.0",
     "jsdom-browser.screen": "^0.2.2",
     "jsdom-browser.screen-orientation": "^0.1.1",
-    "nanoid": "^3.1.23",
+    "nanoid": "^3.1.31",
     "semistandard": "^16.0.1",
     "servatron": "^1.1.3"
   }
