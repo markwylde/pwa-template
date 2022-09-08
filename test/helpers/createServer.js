@@ -1,6 +1,6 @@
 const basictap = require('basictap');
 const http = require('http');
-const servatron = require('servatron');
+const servatron = require('servatron/http');
 
 const staticHandler = servatron({
   directory: './public',

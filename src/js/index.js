@@ -16,13 +16,13 @@ function hijackNavigation () {
   });
 }
 
-document.addEventListener('DOMContentLoaded', async function () {
-  const isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
-  if (isIOS) {
-    require('./utilities/resizeToViewport.js')();
-    require('inobounce');
-  }
+const isIOS = /iPad|iPhone|iPod/.test(navigator.platform);
+if (isIOS) {
+  require('./utilities/resizeToViewport.js')();
+  require('inobounce');
+}
 
+async function main () {
   const context = await createApp();
   hijackNavigation();
 
@@ -57,4 +57,5 @@ document.addEventListener('DOMContentLoaded', async function () {
   context.on('changed', render);
 
   render();
-});
+}
+main();

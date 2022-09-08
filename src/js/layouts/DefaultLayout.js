@@ -1,4 +1,4 @@
-const osk = require('hazkeyboard');
+require('hazkeyboard');
 const m = require('../mithril');
 
 const config = require('../../../config.js');
@@ -13,19 +13,25 @@ const DefaultLayout = function () {
     keyboardVisible: false
   };
 
+  const handleFocusIn = () => {
+    state.keyboardVisible = true;
+    m.redraw();
+  };
+
+  const handleFocusOut = () => {
+    state.keyboardVisible = false;
+    m.redraw();
+  };
+
   return {
     oncreate: async () => {
-      state.oskSubscriber = osk.subscribe(visibility => {
-        state.keyboardVisible = visibility === 'visible';
-        m.redraw();
-      });
+      document.addEventListener('focusin', handleFocusIn);
+      document.addEventListener('focusout', handleFocusOut);
     },
 
     onremove: () => {
-      if (state.oskSubscriber && state.oskSubscriber.unsubscribe) {
-        state.oskSubscriber.unsubscribe();
-        delete state.oskSubscriber;
-      }
+      document.removeEventListener('focusin', handleFocusIn);
+      document.removeEventListener('focusout', handleFocusOut);
     },
 
     view: (vnode) => {
